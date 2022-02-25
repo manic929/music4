@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="/style/style.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- APlayer CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.css"/>
+	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <title>Online music streaming website using html,css And javascript</title>
+ 	</head>
+	<body>
+	<header>
+			<div class="menu_side">
+			<h1>Playlist</h1>
+			<div class="playlist">
+				<h4 class="active"><span>Playlist</span></h4>
+				<h4><span>Playlist</span></h4>
+				<h4><span>Playlist</span></h4>
+			</div>
+			<div class="menu_song">
+				<li class="songItem">
+				<span>1</span>
+				<img src="images/coldplay.jpg" alt="cold">
+				<h5>Higher Power
+				<div class="subtitle">Coldplay</div>
+			</h5>
+			<i class="bi playListPlay bi-play-circle" id="1"></i>
+			</li>
+			<li class="songItem">
+				<span>2</span>
+				<img src="images/red.jpg" alt="red">
+				<h5>All Too Well
+				<div class="subtitle">Taylor Swift</div>
+			</h5>
+			<i class="bi playListPlay bi-play-circle" id="2"></i>
+			</li>
+			<li class="songItem">
+				<span>3</span>
+				<img src="images/sour.jpg" alt="sour">
+				<h5>good 4 u
+				<div class="subtitle">Olivia Rodrigo</div>
+			</h5>
+			<i class="bi playListPlay bi-play-circle" id="3"></i>
+			</li>
+			<li class="songItem">
+				<span>4</span>
+				<img src="images/crash.jpg" alt="crash">
+				<h5>New Shapes
+				<div class="subtitle">Charli XCX</div>
+			</h5>
+			<i class="bi playListPlay bi-play-circle" id="4"></i>
+			</li>
+			</div>
+			</div>
+			<div class="song_side">
+				<nav>
+					<ul>
+						<li>Discover <span></span></li>
+					</ul>
+				</nav>
+			</div>
+			<div class="master_play">
+			<div class="wave">
+			<div class="wave1"></div>
+			<div class="wave1"></div>
+			<div class="wave1"></div>
+		</div>
+		<img src="images/crash.jpg" id="poster_master_play">
+		<h5 id="title">New Shapes <br>
+		<div class="subtitle">Charli XCX</div>
+		</h5>
+		<div class="icon">
+		<i class="bi bi-skip-start-circle" id="back"></i>
+		<i class="bi bi-play-fill" id="masterPlay"></i>
+		<i class="bi bi-skip-end-circle" id="next"></i>
+		</div>
+		<span id="currentStart">0:00</span>
+		<div class="bar">
+			<input type="range" id="seek" min="0" value="0" max="100">
+			<div class="bar2" id="bar2"></div>
+			<div class="dot"></div>
+		</div>
+		<span id="currentEnd">0:00</span>
+		
+		<div class="vol">
+			<i class="bi bi-volume-down-fill" id="vol_icon"></i>
+			<input type="range" id="vol" min="0" value="30" max="100">
+			<div class="vol_bar"></div>
+			<div class="dot" id="vol_dot"></div>
+		</div>
+		</div>
+	</header>
+
+
+<div class="main">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h3>New Releases</h3>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="0">
+					<img src="images/red.jpg" alt="red taylors version cover">
+				</a>
+				<h4>Red (Taylor's Version)</h4>
+				<p>Taylor Swift</p>
+				<p>Pop &bull; 2021</p>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="1">
+					<img src="images/sour.jpg" alt="sour cover">
+				</a>
+				<h4>SOUR</h4>
+				<p>Olivia Rodrigo</p>
+				<p>Pop &bull; 2021</p>
+			</div>
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="2">
+					<img src="images/dreams.jpg" alt="ancient dreams in a modern land cover">
+				</a>
+				<h4>Ancient Dreams in a Modern Land</h4>
+				<p>Marina and the Diamonds</p>
+				<p>Pop &bull; 2022</p>
+			</div>
+
+			<div class="col-md-3">
+				<a href="#" class="album-poster" data-switch="3">
+					<img src="images/mitski.jpg" alt="laurel hell cover">
+				</a>
+				<h4>Laurel Hell</h4>
+				<p>Mitski</p>
+				<p>Alternative &bull; 2022</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="4">
+					<img src="images/dawn.jpg" alt="dawn fm cover">
+				</a>
+				<h4>Dawn FM</h4>
+				<p>The Weeknd</p>
+				<p>R&B &bull; 2022</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="5">
+					<img src="images/adele.png" alt="30 album cover">
+				</a>
+				<h4>30</h4>
+				<p>Adele</p>
+				<p>Pop &bull; 2021</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="6">
+					<img src="images/planet.jpg" alt="planet her cover">
+				</a>
+				<h4>Planet Her</h4>
+				<p>Doja Cat</p>
+				<p>Pop &bull; 2021</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-poster" data-switch="7">
+					<img src="images/coldplay.jpg" alt="Music of the Spheres cover">
+				</a>
+				<h4>Music of the Spheres</h4>
+				<p>Coldplay</p>
+				<p>Pop &bull; 2021</p>
+			</div>
+			
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h3>Upcoming Releases</h3>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-post">
+					<img src="images/crash.jpg" alt="crash cover">
+				</a>
+				<h4>CRASH</h4>
+				<p>Charli XCX</p>
+				<p>OUT MARCH 18TH 2022</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-post">
+					<img src="images/love.jpg" alt="love sux cover">
+				</a>
+				<h4>Love Sux</h4>
+				<p>Avril Lavigne</p>
+				<p>OUT FEBRUARY 25TH 2022</p>
+			</div>
+			<div class="col-md-3">
+				<a href="##" class="album-post">
+					<img src="images/MGC.jpg" alt="mainstream sellout cover">
+				</a>
+				<h4>mainstream sellout</h4>
+				<p>Machine Gun Kelly</p>
+				<p>OUT MARCH 25TH 2022</p>
+			</div>
+			
+			<div class="col-md-3">
+				<a href="##" class="album-post">
+					<img src="images/flume.jpg" alt="palaces cover">
+				</a>
+				<h4>Palaces</h4>
+				<p>Flume</p>
+				<p>OUT MAY 20TH 2022</p>
+			</div>
+		</div>
+<div class="best-new">
+<div>
+	<button class="button-play" onclick="document.getElementById('play').play()"><Воспроизведение></button>
+	<button class="button-pause" onclick="document.getElementById('play').pause()">Пауза</button>
+	<button class="button-up" onclick="document.getElementById('play').volume+=0.1">Громкость +</button>
+	<button class="button-down" onclick="document.getElementById('play').volume-=0.1">Громкость -</button>
+</div>
+</div>
+	</div>
+</div>
+
+	<div id="aplayer"></div>
+	<!-- Jquery Link -->
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+	<!-- Bootstrap Link -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<!-- APlayer Jquery link -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aplayer/1.10.1/APlayer.min.js"></script>
+	<script src="/js/script.js"></script>
+	</body>
+</html>
